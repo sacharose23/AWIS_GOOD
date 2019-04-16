@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,12 +12,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PostController@index');
 
 Route::resource('post','PostController');
-Route::resource('users','UserController');
+// Route::resource('users','UserController');
 
 
 Auth::routes();
