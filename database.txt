@@ -1,0 +1,7 @@
+CREATE USER 'awis'@'localhost' identified with mysql_native_password by 'awis';
+
+CREATE USER 'awis'@'localhost' IDENTIFIED BY 'awis'
+grant usage on *.* to awis@localhost identified by 'awis';
+grant all privileges on awis.* to awis@localhost ;
+
+UPDATE users SET admin = true WHERE email = 'jonpaul.act@gmail.com';
