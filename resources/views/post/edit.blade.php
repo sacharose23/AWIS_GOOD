@@ -14,7 +14,7 @@
                 <div class="field">
                   <label class="label">Event Title</label>
                   <div class="control">
-                    <input class="input" name="title" type="text" placeholder="Text input">
+                    <input class="input" name="title" type="text" placeholder="Text input" value="{{$post->title}}">
                   </div>
                 </div>
                 <!-- <div class="field">
@@ -32,13 +32,13 @@
                 <div class="field">
                   <label class="label">Event Description</label>
                   <div class="control">
-                    <textarea class="textarea" name="description" placeholder="e.g. Hello world"></textarea>
+                    <textarea class="textarea" name="description" placeholder="e.g. Hello world">{{$post->description}}</textarea>
                   </div>
                 </div>
                 <div class="field">
                   <label class="label">Event Address</label>
                   <div class="control">
-                    <input class="input" name="address" type="text" placeholder="123 Unicorn Lane, Rainbow, CA 12345">
+                    <input class="input" name="address" type="text" placeholder="123 Unicorn Lane, Rainbow, CA 12345" value="{{$post->address}}">
                   </div>
                 </div>
                 <div class="field">
@@ -50,17 +50,17 @@
                 <div class="field">
                   <label class="label">Event Link</label>
                   <div class="control">
-                    <input class="input" name="url" type="text" placeholder="URL">
+                    <input class="input" name="url" type="text" placeholder="URL" value="{{$post->url}}">
                   </div>
                 </div>
                 <div class="columns">
                   <div class="column is-half">
                     <label class="label">Number of Volunteer Hours</label>
-                    <input class="input" name="hours" type="text" placeholder="Please type in an integer value.">
+                    <input class="input" name="hours" type="text" placeholder="Please type in an integer value." value="{{$post->hours}}">
                   </div>
                   <div class="column is-half">
                     <label class="label">Number of Volunteers Needed</label>
-                    <input class="input" name="num_volunteers" type="text" placeholder="Please type in an integer value.">
+                    <input class="input" name="num_volunteers" type="text" placeholder="Please type in an integer value." value="{{$post->num_volunteers}}">
                   </div>
                 </div>
                 <div class="columns">
@@ -69,7 +69,7 @@
                       <label class="label">Recurring Status</label>
                       <div class="control" name="recurring_status">
                         <div class="select">
-                          <select>
+                          <select value="{{$post->recurring_status}}">
                               <option>No</option>
                               <option>Ongoing</option>
                               <option>Weekly</option>
@@ -85,7 +85,7 @@
                       <label class="label">Gender Specific</label>
                       <div class="control" name="gender_specific">
                         <div class="select">
-                          <select>
+                          <select value="{{$post->gender_specific}}">
                               <option>Male</option>
                               <option>Female</option>
                               <option>Any</option>
@@ -113,31 +113,31 @@
                 <div class="field">
                   <label class="label">Organization Name</label>
                   <div class="control">
-                    <input class="input" name="org_name" type="text" placeholder="Text input">
+                    <input class="input" name="org_name" type="text" placeholder="Text input" value="{{$post->org_name}}">
                   </div>
                 </div>
                 <!-- <div class="field">
                     <label class="label">Affiliated Organizations</label>
                     <div class="control">
-                      <input class="input" name="affiliated_orgs" type="text" placeholder="Text input">
+                      <input class="input" name="affiliated_orgs" type="text" placeholder="Text input" value="{{$post->affiliated_orgs}}">
                     </div>
                   </div> -->
                 <div class="field">
                   <label class="label">Contact Name</label>
                   <div class="control">
-                    <input class="input" name="spoc" type="text" placeholder="Text input">
+                    <input class="input" name="spoc" type="text" placeholder="Text input" value="{{$post->spoc}}">
                   </div>
                 </div>
                 <div class="field">
                   <label class="label">Contact Phone</label>
                   <div class="control">
-                    <input class="input" name="spoc_phone" type="text" placeholder="949-867-5309">
+                    <input class="input" name="spoc_phone" type="text" placeholder="949-867-5309" class="{{$post->spoc_phone}}">
                   </div>
                 </div>
                 <div class="field">
                   <label class="label">Contact Email</label>
                   <div class="control has-icons-left has-icons-right">
-                    <input class="input is-danger" name="spoc_email" type="email" placeholder="Email input" value="hello@">
+                    <input class="input is-danger" name="spoc_email" type="email" placeholder="Email input" value="{{$post->spoc_email}}">
                     <span class="icon is-small is-left">
                         <i class="fas fa-envelope"></i>
                       </span>

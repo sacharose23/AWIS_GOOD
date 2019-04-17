@@ -12,9 +12,27 @@
             <button class="delete" aria-label="delete"></button>
           </div>
           <div class="message-body">
-            {{ $post->description }}
-            <!-- links -->
-            <br>&nbsp;
+            <strong>Description:</strong> <br>{{ $post->description }}
+            <hr>
+            <h2 class="title is-4">Event Details:</h2>
+            <strong>Starts:</strong> {{ $post->event_start_date }}<br>
+            <strong>Ends:</strong> {{ $post->event_end_date }}<br>
+            <strong>Location</strong>{{ $post->address }} <br>
+            <strong>Deadline</strong>{{ $post->deadline }} <br>
+            <strong>Url</strong>{{ $post->url }} <br>
+            <strong>Hours</strong>{{ $post->hours }} <br>
+            <strong>Number of Volunteers Needed</strong>{{ $post->num_volunteers }} <br>
+            <strong>Gender</strong>{{ $post->gender_specific }} <br>
+            <strong>Membership Required</strong>{{ $post->members_only }} <br>
+            <hr>
+            <h2 class="title is-4">Contact info:</h2>
+            <strong>Organization Name</strong> {{ $post->org_name }} <br>
+            <strong></strong> {{ $post->affiliated_orgs }} <br>
+            <strong>Event Organizer</strong> {{ $post->spoc }} <br>
+            <strong>Phone:</strong> {{ $post->spoc_phone }} / 
+            <strong>Email:</strong> {{ $post->spoc_email }} <br>
+  
+            <br>
             <nav class="level">
               <div class="level-left">
                 <div class="level-item">
@@ -26,8 +44,7 @@
               <div class="level-right">
                 {{--
                 <p class="level-item"><a>Published</a></p> --}}
-                <p class="level-item"><a class="button is-info is-small">share</a></p>
-                <p class="level-item"><a class="button is-success is-small">View</a></p>
+                <p class="level-item"><a class="button is-info is-small">share</a></p>                
               </div>
             </nav>
           </div>
